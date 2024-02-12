@@ -7,3 +7,9 @@
     name: httpd
     state: present
 
+- name: Enable service to start on boot up
+  service:
+    name: httpd
+    state: started
+
+
