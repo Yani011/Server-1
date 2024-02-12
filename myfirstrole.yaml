@@ -1,0 +1,16 @@
+---
+- name: install apache server
+  hosts: thename
+  vars:
+  roles: 
+    - apache
+  tags:
+    - apachetag   
+
+- name: install apache server
+  hosts: thename
+  vars:
+  roles:
+    - ntp 
+  tags: 
+    -ntptag   

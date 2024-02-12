@@ -1,0 +1,9 @@
+---
+# tasks file for apache  
+
+
+- name: Install specific version of Apache
+  yum:
+    name: httpd
+    state: present
+
