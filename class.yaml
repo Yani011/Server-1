@@ -1,0 +1,12 @@
+---
+- name: A simple playbook file
+  hosts: thename
+  tasks:
+
+    - name: Print a sample message
+      debug:
+        msg: Hello World. Welcome to Ansible playbooks!
+
+    - name: hi
+      debug:
+        msg: World hi
