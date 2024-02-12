@@ -2,19 +2,22 @@
 - name: A simple playbook file
   hosts: thename
   vars:
-    - ayana2: 24
+    ayana: 24
   tasks:
 
     - name: Print a sample message
       debug:
-        msg: Hello World. Welcome to Ansible playbooks!
+        msg: "Hello World. Welcome to Ansible playbooks!"
 
     - name: using variables
       debug:
-        msg: ayana's age. ayana age is {{ ayana }}
-    
+        msg: "Ayana's age. Ayana's age is {{ ayana }}"
 
-    - name: varible2
-      debug:
-        msg: "ayana's age. ayana age is {{ ayana2 }}"
-      when: ayana2 == "26"
+    - name: Install multiple software
+      yum:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - httpd
+        - samba
+        - vsftpd
