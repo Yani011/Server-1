@@ -13,3 +13,18 @@
     state: started
 
 
+- name: Copy Config Template
+  template: 
+    src: httpd.conf
+    dest: /etc/httpd/conf/httpd.conf
+
+- name: copy html file
+  template:
+    src: ayana.html
+    dest: /var/www/html/ayana.html
+
+- name: restart service 
+  service: 
+    name: httpd
+    state: restarted  
+
