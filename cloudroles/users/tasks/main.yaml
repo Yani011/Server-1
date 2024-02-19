@@ -1,0 +1,28 @@
+ - name: create user alice
+       user:
+         name: alice
+         state: present
+         groups: groupA
+         createhome: yes
+         password_lock: yes
+         update_password: on_create
+
+     - name: create user paul
+       user:
+         name: paul
+         state: present
+         groups: groupA
+         createhome: yes
+         password_lock: yes
+         update_password: on_create
+
+
+     - name: create user bobby
+       user:
+         name: bobby
+         state: present
+         groups: groupA
+         createhome: yes
+         password_lock: yes
+         update_password: on_create
+

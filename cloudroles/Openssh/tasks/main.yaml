@@ -1,0 +1,4 @@
+ - name: insatll OpenSSH
+       package:
+         name: openssh-server
+         state: present
