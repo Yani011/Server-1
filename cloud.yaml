@@ -1,5 +1,5 @@
 ---
- - name: create 3 new users
+ - name: create 3 new users and install 2 packages   
    hosts: thename
    become: yes
 
@@ -30,7 +30,15 @@
          groups: groupA
          createhome: yes
          password_lock: yes
-         update_password: on_create
+         update_password: on_create 
 
-
+     - name: insatll OpenSSH
+       package:
+         name: openssh-server 
+         state: present
+           
+     - name: install Nginx
+       package:
+         name: nginx
+         state: present
 
